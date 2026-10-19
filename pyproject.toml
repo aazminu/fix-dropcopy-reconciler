@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fix-dropcopy-reconciler"
+version = "0.2.0"
+description = "Post-trade FIX 4.2/4.4 ExecutionReport (35=8) drop-copy clearing reconciler and DTCC NSCC T+1 Continuous Net Settlement (CNS) engine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Abdullah Azmi", email = "m4u5t4@u.northwestern.edu" }
+]
+keywords = ["fix-protocol", "drop-copy", "clearing", "reconciliation", "t+1-settlement", "cns", "trading-systems"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://abdullahazmi.com"
+Repository = "https://github.com/aazminu/fix-dropcopy-reconciler"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
