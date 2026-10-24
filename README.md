@@ -77,3 +77,18 @@ pytest -v
 - Website: [https://abdullahazmi.com](https://abdullahazmi.com)  
 - GitHub: [@aazminu](https://github.com/aazminu)  
 - Email: `m4u5t4@u.northwestern.edu`
+
+
+## CLI Diagnostics & Invariant Verification
+
+Run the built-in deterministic diagnostic probe and invariant self-check directly via the module CLI:
+
+```bash
+PYTHONPATH=src python -m fix_reconciler --self-test --json
+```
+
+Run the complete regression test suite:
+
+```bash
+PYTHONPATH=src pytest -q
+```
